@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页测试</title>
+    <link rel="stylesheet" href="./iconfont library/fontawesome-free-6.1.2-web/css/all.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .link {
+            color: rgb(122, 122, 122);
+        }
+
+        .link:hover {
+            color: rgb(71, 71, 71);
+        }
+
+        #indicator {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 10px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .index-box {
+            width: 160px;
+            height: auto;
+            background-color: rgba(248, 248, 248, .7);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            position: fixed;
+            left: 10%;
+            top: 240px;
+            overflow: hidden;
+            padding-right: 10px;
+        }
+
+        .titles {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 10px;
+            color: rgb(122, 122, 122);
+            line-height: 24px;
+        }
+
+        #heading {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(122, 122, 122);
+            line-height: 24px;
+            margin-left: 10px;
+        }
+
+        #subtitles {
+            display: block;
+            width: 130px;
+            height: auto;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(122, 122, 122);
+            margin-left: 10px;
+            font-size: 15px;
+            line-height: 18px;
+            padding: 2px 10px 2px 10px;
+        }
+
+        .content-box {
+            width: 66%;
+            height: fit-content;
+            background-color: rgba(248, 248, 248, .7);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            position: absolute;
+            right: 8%;
+            top: 240px;
+            padding: 10px;
+            line-height: 22px;
+            z-index: 0;
+        }
+
+        .picture-1 {
+            width: 764px;
+            height: 262px;
+            background-size: cover;
+            background-image: url(./experiment-1.png);
+            margin: 0 auto;
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+        }
+
+        #p0 {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        #p0-5,
+        #p1-5,
+        #p2-5 {
+            font-size: 22px;
+        }
+
+        .pic-annotate {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar-wrapper">
+        <div class="container">
+            <ul class="list">
+                <a href="javascript:;">
+                    <li>
+                        Home</li>
+                </a>
+                <div class="team">
+                    <a href="javascript:;">
+                        <li>Team</li>
+                    </a>
+                    <div class="team-sub-items">
+                        <a href="javascript:;">
+                            <li class="sub-item">Members</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Attribution</li>
+                        </a>
+                        <br>
+                        <a href="javascirpt:;">
+                            <li class="sub-item">Collaboration</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Partnership</li>
+                        </a>
+                    </div>
+                </div>
+                <div class="project">
+                    <a href="javascript:;">
+                        <li>Project</li>
+                    </a>
+                    <div class="project-sub-items">
+                        <a href="javascript:;">
+                            <li class="sub-item">Description</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Design</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Experiment</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Proof of Concept</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Proposed Implementation</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Hardware</li>
+                        </a>
+                    </div>
+                </div>
+                <a href="javascript:;">
+                    <li>Model</li>
+                </a>
+                <div class="part">
+                    <a href="javascript:;">
+                        <li>Part</li>
+                    </a>
+                    <div class="part-sub-items">
+                        <a href="javascript:;">
+                            <li class="sub-item">Overview</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Contribution</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Engineering Success</li>
+                        </a>
+                    </div>
+                </div>
+                <div class="hp">
+
+                    <a href="javascript:;">
+                        <li>HP</li>
+                    </a>
+
+                    <div class="hp-sub-items">
+                        <a href="javascript:;">
+                            <li class="sub-item">Human Practice</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Science Communication</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Education</li>
+                        </a>
+                    </div>
+                </div>
+                <div class="lab">
+
+                    <a href="javascript:;">
+                        <li>Lab</li>
+                    </a>
+
+                    <div class="lab-sub-items">
+                        <a href="javascript:;">
+                            <li class="sub-item">Notebook</li>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="javascript:;">
+                    <li>Safety</li>
+                </a>
+
+                <!-- 
+    搜索功能不再受支持
+            <div class="search">
+                <a href="javascript:;">
+                    <li><i class="fas fa-search"></i></li>
+                </a>
+                <div class="search-box">
+                    <input class="search-box-type" type="text" placeholder=" Search for Anything...">
+                </div>
+            </div> -->
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="warning">
+        Warning: Website under development. Any changes may occur in the future.
+    </div>
+
+    <div class="title">
+        <p id="title">Experiments</p>
+    </div>
+
+    <div class="index-box">
+        <div class="titles">
+            <h1 id="indicator">CONTENTS</h1>
+            <span id="heading">
+                <a class="link" href="#p0">Tuesday (July 26)</a>
+            </span>
+            <span id="subtitles">
+                <a class="link" href="#p0-5">Biosensor Sensing Naringenin</a>
+            </span>
+            <span id="subtitles">
+                <a class="link" href="#p1-5">Delphinidin Synthesis Operon (Naringenin Added)</a>
+            </span>
+            <span id="subtitles">
+                <a class="link" href="#p2-5">Naringenin Synthesis Operon (4-coumaric Acid Added)</a>
+            </span>
+            <span id="heading">
+                <a class="link" href="javascript:;">Title 2</a>
+            </span>
+            <br>
+            <span id="heading">
+                <a class="link" href="javascript:;">Title 3</a>
+            </span>
+            <br>
+            <span id="heading">
+                <a class="link" href="javascript:;">Title 4</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="content-box">
+        <p id="p0">Tuesday (July 26)</p>
+        <p id="p0-5"><br>1. Biosensor sensing naringenin</p>
+        <p id="p1">
+            <br>
+            a) Inductor BL21 was added to two liquid media (containing 3um naringenin), after cultured overnight at 16 °
+            C, centrifuged, it is observed that the fluorescence intensity of the bacterial mass (in the morning).
+            <br>
+            <br>
+            b) Add 0.5mm IPTG to the two liquid culture media, induce culture at 16 ° overnight, centrifuge, and observe
+            the fluorescence intensity of the bacterial mass (in the afternoon).
+            <br>
+            <br>
+            c) Prepare two pieces of protein glue, centrifuge the preserved solution, ultrasonic wave, take the
+            supernatant, add it into the protein loading buffer, boil it, and electrophoresis (electrophoresis staining,
+            afternoon).
+            <br>
+            <br>
+        </p>
+        <p id="p1-5">6. Delphinidin Synthesis Operon (Naringenin Added)</p>
+        <p id="p2">
+            <br>
+            Prepare 50 ml LB culture solution containing 3um naringenin and 50ug / ml Kan, and prepare 50 ml LB culture
+            solution containing no naringenin and only 50ug / ml.
+            <br><br>
+            c) Select the BL21 transformed monoclonal containing plasmid 5, inoculate it in LB containing antibiotics,
+            grow it overnight, dilute it with fresh lb to OD600 of 0.1, and culture it in a shake flask. Incubate at 37
+            ° C until OD600 is 0.8, add 0.5 mm isopropyl-d-mercaptogalactoside (IPTG) for induction, and grow at
+            250rpm-300rpm at 30 ° C for 3 h to overexpress the protein. The cells were collected by centrifugation and
+            resuspended in M9 liquid medium at pH5, containing necessary antibiotics, 1% glucose, 20mm naringenin, 0.5mm
+            IPTG, 0.1 mm 2-oxoglutarate, 2.5 mM sodium ascorbate. The cells were incubated at 30 ° C for 48h (the
+            supplement at the middle 24h can be selected: 1% glucose (20ul), 2um naringenin). After that, the cells were
+            centrifuged to observe the color of the bacterial mass (adding HCl to make it pink, adding NaOH to make it
+            grass green). d) BL21 solution of carrier 5 was cultured in LB medium of 3um naringenin and 50ug / ml Kan
+            for 16h. Respectively take 1ml of culture, 12000rpm, 1min, observe the color of the bacteria at the bottom
+            of the tube, and take photos.
+            <br>
+        </p>
+        <div class="picture-1"></div>
+        <p>
+            <br>
+        <p class="pic-annotate"><b>IN THIS PICTURE</b>
+            <br>
+            Plasmid 5 contains four fusion proteins, among these proteins, F3H catalyzes the conversion of naringenin to
+            dihydrokaempferol, F3 '5' H catalyzes
+            the conversion of dihydrokaempferol to dihydromyricetin, DFR catalyzes the conversion of Dihydromyricetin to
+            colorless delphinidin, and ans catalyzes the conversion of colorless delphinidin to colorless delphinidin.
+            <br>
+            The coding genes of the first two proteins are driven by the first T7 promoter of the vector for
+            transcription, and the coding genes of the last two proteins are driven by the second T7 promoter of the
+            vector for transcription, and finally translated into four corresponding proteins.
+        </p>
+        </p>
+        <p>
+            <br>
+            e) The BL21 bacterial solution of carrier 5 was cultured in LB medium of 0um naringenin and 50ug / ml Kan
+            for
+            16h, and 1ml of culture was taken respectively at 12000rpm for 1min. The color of the bacterial mass at the
+            bottom of the tube was observed and photographed.
+            <br><br>
+            f) BL21 solution of carrier 5 was cultured in LB medium of 3um naringenin, 50ug / ml Kan and 0.5 mm IPTG for
+            16h. Respectively take 1ml of culture, 12000rpm, 1min, observe the color of the bacteria at the bottom of
+            the tube, and take photos.
+            <br><br>
+            g) BL21 solution of carrier 5 was cultured in LB medium containing 0 um naringenin, 50 UG / ml Kan and 0.5
+            mm IPTG for 16 h. Respectively take 1ml of culture, 12000rpm, 1min, observe the color of the bacteria at the
+            bottom of the tube, and take photos.
+            <br>
+            <br>
+        </p>
+        <p id="p2-5">7. Naringenin synthesis operon (add 4-coumaric acid)</p>
+        <p id="p3">
+            <br>
+            h) Prepare a plate containing 25ug / ml ampicillin and 12.5ug/ml chloramphenicol. The competent cells dh5a
+            and BL21 were co transformed with the receptor plasmid and plasmid 4.
+            <br><br>
+            i) Prepare 50ml LB liquid medium containing 0.2g/l coumaric acid, add 12.5ug/ml cm and 25ug/ml amp
+            <br><br>
+            j) Prepare LB liquid medium without coumaric acid, add 12.5ug/ml cm and 25ug/ml amp
+            <br><br>
+            k) Plasmid was extracted and transformed.
+            <br><br>
+            l) Prepare a receptive state.
+            <br><br>
+            m) Plasmid 5 and plasmid 4 were transformed into dh5a and BL21 competent cells, respectively.
+            <br><br>
+            n) The receptor plasmid and plasmid 4 were co transformed into BL21, expanded and shaken, and screened and
+            cultured in LB plates containing 25ug / ml ampicillin and 12.5ug/ml chloramphenicol. After 16 hours,
+            monoclonal antibodies were selected, cultured in LB medium containing coumarin and without coumarin,
+            induced, centrifuged, and observed the changes of green fluorescence of the bacteria. The bacterial fluid of
+            receptor and BL21 were selected for comparison.
+
+        </p>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br>
+
+    <div class="footer">
+        <br>
+        <img width="60px" src="./三色帆.png" alt="">
+        <img width="50px" src="./江源工作室 未来logo.png" alt="">
+        <br>
+        <!-- All websites are created by al.studio (Li Jiangyuan). -->
+        <br>
+        Plagarism and any form of unauthorzied copying of any elements on this page is prohibited.
+        <br>
+        Have a question / an advice? Send an email to jerrylovesapple@icloud.com
+        <br>
+        SHSBNU_China ©️ All Rights Reserved.
+        <br><br><br><br>
+    </div>
+
+    <a href="#">
+        <div class="return-to-top">
+            <i class="fas fa-chevron-up"></i>
+
+            <br>
+        </div>
+    </a>
+
+    <div class="box3"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页测试</title>
+    <link rel="stylesheet" href="./iconfont library/fontawesome-free-6.1.2-web/css/all.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .link {
+            color: rgb(122, 122, 122);
+        }
+
+        .link:hover {
+            color: rgb(71, 71, 71);
+        }
+
+        #indicator {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 10px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .index-box {
+            width: 160px;
+            height: auto;
+            background-color: rgba(248, 248, 248, .7);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            position: fixed;
+            left: 10%;
+            top: 240px;
+            overflow: hidden;
+            padding-right: 10px;
+        }
+
+        .titles {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 10px;
+            color: rgb(122, 122, 122);
+            line-height: 24px;
+        }
+
+        #heading {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(122, 122, 122);
+            line-height: 24px;
+            margin-left: 10px;
+        }
+
+        #subtitles {
+            display: block;
+            width: 130px;
+            height: auto;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(122, 122, 122);
+            margin-left: 10px;
+            font-size: 15px;
+            line-height: 18px;
+            padding: 2px 10px 2px 10px;
+        }
+
+        .content-box {
+            width: 66%;
+            height: fit-content;
+            background-color: rgba(248, 248, 248, .7);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            position: absolute;
+            right: 8%;
+            top: 240px;
+            padding: 10px;
+            line-height: 22px;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+        }
+
+        #p0 {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        #p0-5,
+        #p1-5,
+        #p2-5 {
+            font-size: 22px;
+        }
+
+        .pic-annotate {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar-wrapper">
+        <div class="container">
+            <ul class="list">
+                <a href="javascript:;">
+                    <li>
+                        Home</li>
+                </a>
+                <div class="team">
+                    <a href="javascript:;">
+                        <li>Team</li>
+                    </a>
+                    <div class="team-sub-items">
+                        <a href="javascript:;">
+                            <li class="sub-item">Members</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Attribution</li>
+                        </a>
+                        <br>
+                        <a href="javascirpt:;">
+                            <li class="sub-item">Collaboration</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Partnership</li>
+                        </a>
+                    </div>
+                </div>
+                <div class="project">
+                    <a href="javascript:;">
+                        <li>Project</li>
+                    </a>
+                    <div class="project-sub-items">
+                        <a href="javascript:;">
+                            <li class="sub-item">Description</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Design</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Experiment</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Proof of Concept</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Proposed Implementation</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Hardware</li>
+                        </a>
+                    </div>
+                </div>
+                <a href="javascript:;">
+                    <li>Model</li>
+                </a>
+                <div class="part">
+                    <a href="javascript:;">
+                        <li>Part</li>
+                    </a>
+                    <div class="part-sub-items">
+                        <a href="javascript:;">
+                            <li class="sub-item">Overview</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Contribution</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Engineering Success</li>
+                        </a>
+                    </div>
+                </div>
+                <div class="hp">
+
+                    <a href="javascript:;">
+                        <li>HP</li>
+                    </a>
+
+                    <div class="hp-sub-items">
+                        <a href="javascript:;">
+                            <li class="sub-item">Human Practice</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Science Communication</li>
+                        </a>
+                        <br>
+                        <a href="javascript:;">
+                            <li class="sub-item">Education</li>
+                        </a>
+                    </div>
+                </div>
+                <div class="lab">
+
+                    <a href="javascript:;">
+                        <li>Lab</li>
+                    </a>
+
+                    <div class="lab-sub-items">
+                        <a href="javascript:;">
+                            <li class="sub-item">Notebook</li>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="javascript:;">
+                    <li>Safety</li>
+                </a>
+
+                <!-- 
+    搜索功能不再受支持
+            <div class="search">
+                <a href="javascript:;">
+                    <li><i class="fas fa-search"></i></li>
+                </a>
+                <div class="search-box">
+                    <input class="search-box-type" type="text" placeholder=" Search for Anything...">
+                </div>
+            </div> -->
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="warning">
+        Warning: Website under development. Any changes may occur in the future.
+    </div>
+
+    <div class="title">
+        <p id="title">Experiments</p>
+    </div>
+
+    <div class="index-box">
+        <div class="titles">
+            <h1 id="indicator">CONTENTS</h1>
+            <span id="heading">
+                <a class="link" href="#p0">Title 1</a>
+            </span>
+            <span id="subtitles">
+                <a class="link" href="#p0-5">Subtitle 1</a>
+            </span>
+            <span id="subtitles">
+                <a class="link" href="#p1-5">Subtitle 2</a>
+            </span>
+            <span id="subtitles">
+                <a class="link" href="#p2-5">Subtitle 3</a>
+            </span>
+            <span id="heading">
+                <a class="link" href="javascript:;">Title 2</a>
+            </span>
+            <br>
+            <span id="heading">
+                <a class="link" href="javascript:;">Title 3</a>
+            </span>
+            <br>
+            <span id="heading">
+                <a class="link" href="javascript:;">Title 4</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="content-box">
+        <p id="p0">Title 1</p>
+        <p id="p0-5"><br>Subtitle 1</p>
+        <p id="p1">
+            <br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, aliquid saepe beatae minus culpa corporis
+            possimus aut eligendi necessitatibus quis voluptate autem? Repellendus, placeat! Quam consectetur quibusdam
+            ratione odio similique!
+            <br>
+            <br>
+        </p>
+        <p id="p1-5">Subtitle 2</p>
+        <p id="p2">
+            <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit aperiam, rem omnis quibusdam voluptas
+            quia labore. Eos tenetur sit nostrum nesciunt officiis provident omnis tempora distinctio corporis, saepe
+            cumque mollitia.
+            <br>
+        </p>
+        <p>
+            <br>
+        <p class="pic-annotate"><b>IN THIS PICTURE</b>
+            <br>
+            Picture annotations.
+        </p>
+        </p>
+        <p>
+            <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad repudiandae expedita, assumenda excepturi nihil
+            dignissimos pariatur eaque dolorem accusamus numquam recusandae ea distinctio ducimus placeat doloremque
+            vel! Cum, vitae itaque!
+            <br>
+            <br>
+        </p>
+        <p id="p2-5">Subtitle 3</p>
+        <p id="p3">
+            <br>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit quaerat nobis atque laborum dignissimos
+            necessitatibus id ut nostrum tenetur dolore tempore quod iste, deleniti obcaecati nemo, animi vel velit
+            consectetur.
+        </p>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br>
+
+    <div class="footer">
+        <br>
+        <img width="60px" src="./三色帆.png" alt="">
+        <img width="50px" src="./江源工作室 未来logo.png" alt="">
+        <br>
+        <!-- All websites are created by al.studio (Li Jiangyuan). -->
+        <br>
+        Plagarism and any form of unauthorzied copying of any elements on this page is prohibited.
+        <br>
+        Have a question / an advice? Send an email to jerrylovesapple@icloud.com
+        <br>
+        SHSBNU_China ©️ All Rights Reserved.
+        <br><br><br><br>
+    </div>
+
+    <a href="#">
+        <div class="return-to-top">
+            <i class="fas fa-chevron-up"></i>
+
+            <br>
+        </div>
+    </a>
+
+    <div class="box3"></div>
+
+</body>
+
+</html>

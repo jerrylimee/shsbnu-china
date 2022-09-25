@@ -23,6 +23,8 @@
   <!-- Page Content -->
   {% block page_content %}{% endblock %}
 
+  {% include 'footer.html' %}
+
   <!-- Bootstrap Bundle with Popper -->
   <script src="{{ url_for('static', filename = 'js/jquery-1.12.4.min.js') }}"></script>
   <script src="{{ url_for('static', filename = 'js/bootstrap.bundle.min.js') }}"></script>

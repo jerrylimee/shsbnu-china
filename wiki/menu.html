@@ -1,94 +1,118 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<div class="top-bar-wrapper">
   <div class="container">
-
-    <!---- TEAM NAME ---->
-    <a class="navbar-brand" href="#">SHSBNU_China</a>
-
-    <!---- SMALL SCREEN MENU ICON ---->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto left-aligned">
-
-        <!---- HOME ---->
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('index') }}">Home</a>
-        </li>
-
-        <!---- TEAM ---->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="{{ url_for('pages', page='team') }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Team
+    <ul class="list">
+      <a href="{{ url_for('pages', page='index') }}">
+        <li>Home</li>
+      </a>
+      <div class="team">
+        <a href="javascript:;">
+          <li>Team</li>
+        </a>
+        <div class="team-sub-items">
+          <a href="{{ url_for('pages', page='team') }}">
+            <li class="sub-item">Members</li>
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='team') }}">Team</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='attributions') }}">Attributions</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='collaborations') }}">Collaborations</a></li>
-          </ul>
-        </li>
 
-        <!---- PROJECT ---->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Project
+          <a href="{{ url_for('pages', page='attribution') }}">
+            <li class="sub-item">Attribution</li>
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='communication') }}">Communication</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='contribution') }}">Contribution</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='description') }}">Description</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='engineering') }}">Engineering</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='experiments') }}">Experiments</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='implementation') }}">Implementation</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='notebook') }}">Notebook</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='partnership') }}">Partnership</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='proof-of-concept') }}">Proof of Concept</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='results') }}">Results</a></li>
-          </ul>
-        </li>
 
-        <!---- PARTS ---->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Parts
+          <a href="{{ url_for('pages', page='collaboration') }}">
+            <li class="sub-item">Collaboration</li>
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='part-collection') }}">Part Collection</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='parts') }}">Parts</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='improve') }}">Improve</a></li>
-          </ul>
-        </li>
 
-        <!---- SAFETY ---->
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('pages', page='safety') }}">Safety</a>
-        </li>
-
-        <!---- HUMAN PRACTICES ---->
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('pages', page='human-practices') }}">Human Practices</a>
-        </li>
-
-        <!---- AWARDS ---->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Awards
+          <a href="{{ url_for('pages', page='partnership') }}">
+            <li class="sub-item">Partnership</li>
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='education') }}">Education</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='entrepreneurship') }}">Entrepreneurship</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='hardware') }}">Hardware</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='inclusivity') }}">Inclusivity</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='measurement') }}">Measurement</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='model') }}">Model</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='plant') }}">Plant</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='software') }}">Software</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='sustainable') }}">Sustainable</a></li>
-          </ul>
-        </li>
+        </div>
+      </div>
+      <div class="project">
+        <a href="javascript:;">
+          <li>Project</li>
+        </a>
+        <div class="project-sub-items">
+          <a href="{{ url_for('pages', page='description') }}">
+            <li class="sub-item">Description</li>
+          </a>
 
-      </ul>
-    </div>
+          <a href="{{ url_for('pages', page='design') }}">
+            <li class="sub-item">Design</li>
+          </a>
+
+          <a href="{{ url_for('pages', page='experiments') }}">
+            <li class="sub-item">Experiments</li>
+          </a>
+
+          <a href="{{ url_for('pages', page='proof-of-concept') }}">
+            <li class="sub-item">Proof of Concept</li>
+          </a>
+
+          <a href="{{ url_for('pages', page='implementation') }}">
+            <li class="sub-item">Implementation</li>
+          </a>
+
+          <a href="{{ url_for('pages', page='hardware') }}">
+            <li class="sub-item">Hardware</li>
+          </a>
+        </div>
+      </div>
+      <a href="javascript:;">
+        <li>Model</li>
+      </a>
+      <div class="part">
+        <a href="{{ url_for('pages', page='part') }}">
+          <li>Part</li>
+        </a>
+        <div class="part-sub-items">
+          <a href="{{ url_for('pages', page='overview') }}">
+            <li class="sub-item">Overview</li>
+          </a>
+
+          <a href="{{ url_for('pages', page='contribution') }}">
+            <li class="sub-item">Contribution</li>
+          </a>
+
+          <a href="{{ url_for('pages', page='engineering-success') }}">
+            <li class="sub-item">Engineering Success</li>
+          </a>
+        </div>
+      </div>
+      <div class="hp">
+
+        <a href="javascript:;">
+          <li>HP</li>
+        </a>
+
+        <div class="hp-sub-items">
+          <a href="{{ url_for('pages', page='human-practice') }}">
+            <li class="sub-item">Human Practice</li>
+          </a>
+
+          <a href="{{ url_for('pages', page='science-communication') }}">
+            <li class="sub-item">Science Communication</li>
+          </a>
+
+          <a href="{{ url_for('pages', page='education') }}">
+            <li class="sub-item">Education</li>
+          </a>
+        </div>
+      </div>
+      <div class="lab">
+
+        <a href="javascript:;">
+          <li>Lab</li>
+        </a>
+
+        <div class="lab-sub-items">
+          <a href="{{ url_for('pages', page='notebook') }}">
+            <li class="sub-item">Notebook</li>
+          </a>
+        </div>
+      </div>
+
+      <a href="{{ url_for('pages', page='safety') }}">
+        <li>Safety</li>
+      </a>
+    </ul>
   </div>
-</nav>
+</div>

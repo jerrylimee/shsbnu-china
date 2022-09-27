@@ -1,3 +1,9 @@
+桃李春风一杯酒，江湖夜雨十年灯。
+嗨。
+慢慢来。
+要做的还有很多。
+要改的不要弄错。
+
 # Team SHSBNU_China 2022 Wiki
 
 This repository **MUST** contain all coding assets to generate your team's wiki (HTML, CSS, JavaScript, TypeScript, Python, etc).

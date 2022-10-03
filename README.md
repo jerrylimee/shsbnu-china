@@ -1,11 +1,5 @@
-桃李春风一杯酒，江湖夜雨十年灯。
-嗨。
-慢慢来。
-要做的还有很多。
-要改的不要弄错。
-
 # Team SHSBNU_China 2022 Wiki
-
+桃李春风一杯酒，江湖夜雨十年灯。
 This repository **MUST** contain all coding assets to generate your team's wiki (HTML, CSS, JavaScript, TypeScript, Python, etc).
 
 Images, photos, icons and fonts **MUST** be stored on `static.igem.wiki` using [uploads.igem.org](https://uploads.igem.org), and Videos **must** be embedded from [iGEM Video Universe](https://video.igem.org).

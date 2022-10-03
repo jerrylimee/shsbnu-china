@@ -366,11 +366,7 @@ h5 {
   font-weight: bold;
   padding: 5px;
 }
-.home-main #background-image {
-  width: 70%;
-  position: fixed;
-  z-index: -9999;
-}
+
 .home-main .welcome-mat {
   height: 800px;
   width: 900px;

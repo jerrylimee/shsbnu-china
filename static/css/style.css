@@ -316,8 +316,8 @@ h5 {
   transition: all 0.4s;
 }
 .top-bar-wrapper .team:hover .team-sub-items {
-  width: 220px;
-  height: 120px;
+  width: 150px;
+  height: 130px;
   padding: 10px 0;
   outline: 1px #e4e4e4 solid;
 }

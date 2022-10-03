@@ -317,13 +317,13 @@ h5 {
 }
 .top-bar-wrapper .team:hover .team-sub-items {
   width: 150px;
-  height: 130px;
+  height: 135px;
   padding: 10px 0;
   outline: 1px #e4e4e4 solid;
 }
 .top-bar-wrapper .project:hover .project-sub-items {
-  width: 220px;
-  height: 180px;
+  width: 150px;
+  height: 170px;
   padding: 10px 0;
   outline: 1px #e4e4e4 solid;
 }

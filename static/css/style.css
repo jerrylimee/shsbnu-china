@@ -547,7 +547,8 @@ h5 {
 .article-main .container .content {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   width: -100%;
-  background: rgba(235, 235, 235, 0.85);
+  background: rgba(243, 243, 243, 0.5);
+  backdrop-filter: blur(12px);
   padding: 30px;
   font-size: 18px;
   border-radius: 20px;
@@ -571,12 +572,13 @@ h5 {
 }
 .article-main .container .wrap-box {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  width: 300px;
+  width: 200px;
   position: absolute;
   top: 0;
   margin-left: -20px;
   line-height: 30px;
-  background: rgba(235, 235, 235, 0.85);
+  background: rgba(243, 243, 243, 0.5);
+  backdrop-filter: blur(12px);
   border-radius: 20px;
   padding: 20px 0 20px 10px;
 }
@@ -604,7 +606,6 @@ h5 {
   width: 100%;
   height: 60px;
   line-height: 60px;
-  border-bottom: 1px dashed #ddd;
 }
 .article-main .container .wrap-box ul li:before {
   width: 24px;

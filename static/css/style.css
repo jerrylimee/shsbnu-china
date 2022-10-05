@@ -167,15 +167,11 @@ h5 {
   height: 30px;
   background-color: rgba(227, 227, 227, 0.5);
   border-radius: 35px;
-  -webkit-border-radius: 35px;
-  -moz-border-radius: 35px;
   position: fixed;
   top: 20px;
   left: 0;
   right: 0;
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  -moz-backdrop-filter: blur(12px);
   z-index: 9999;
   align-content: center;
 }
@@ -264,8 +260,6 @@ h5 {
   height: 0;
   background-color: #f5f5f5;
   border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
   font-size: 15px;
   box-shadow: 0px 8px 10px rgba(73, 73, 73, 0.44);
   outline: 0px #e4e4e4 solid;
@@ -273,7 +267,8 @@ h5 {
   transition: all 0.4s;
 }
 .top-bar-wrapper .team-sub-items li {
-  float: left;
+  float: left
+    ;
 }
 .top-bar-wrapper .project-sub-items {
   position: absolute;
@@ -283,8 +278,6 @@ h5 {
   height: 0;
   background-color: #f5f5f5;
   border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
   font-size: 15px;
   box-shadow: 0px 8px 10px rgba(73, 73, 73, 0.44);
   outline: 0px #e4e4e4 solid;
@@ -299,8 +292,6 @@ h5 {
   height: 0;
   background-color: #f5f5f5;
   border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
   font-size: 15px;
   box-shadow: 0px 8px 10px rgba(73, 73, 73, 0.44);
   outline: 0px #e4e4e4 solid;
@@ -315,8 +306,6 @@ h5 {
   height: 0;
   background-color: #f5f5f5;
   border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
   font-size: 15px;
   box-shadow: 0px 8px 10px rgba(73, 73, 73, 0.44);
   outline: 0px #e4e4e4 solid;
@@ -331,8 +320,6 @@ h5 {
   height: 0;
   background-color: #f5f5f5;
   border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
   font-size: 15px;
   box-shadow: 0px 8px 10px rgba(73, 73, 73, 0.44);
   outline: 0px #e4e4e4 solid;

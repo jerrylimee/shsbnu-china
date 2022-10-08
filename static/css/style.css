@@ -589,8 +589,6 @@ h5 {
   height: 24px;
   display: inline-block;
   content: "";
-  background: url("https://static.igem.wiki/teams/4255/wiki/book.png") no-repeat;
-  background-size: 100%;
   margin-right: 5px;
 }
 .article-main .container .wrap-box ul {
@@ -609,8 +607,6 @@ h5 {
   height: 24px;
   display: inline-block;
   content: "";
-  background: url("https://static.igem.wiki/teams/4255/wiki/shuqian.png") no-repeat;
-  background-size: 100%;
   margin-right: 5px;
 }
 .article-main .container .wrap-box ul li a {

@@ -162,7 +162,6 @@ h5 {
 /* 导航栏 */
 .top-bar-wrapper {
   margin: 0 auto;
-  outline: 1px rgba(203, 203, 203, 0.5) solid;
   width: 650px;
   height: 30px;
   background-color: rgba(227, 227, 227, 0.5);
@@ -332,31 +331,26 @@ h5 {
   width: 180px;
   height: 140px;
   padding: 10px 0;
-  outline: 1px #e4e4e4 solid;
 }
 .top-bar-wrapper .project:hover .project-sub-items {
   width: 180px;
   height: 170px;
   padding: 10px 0;
-  outline: 1px #e4e4e4 solid;
 }
 .top-bar-wrapper .part:hover .part-sub-items {
   width: 180px;
   height: 50px;
   padding: 10px 0;
-  outline: 1px #e4e4e4 solid;
 }
 .top-bar-wrapper .hp:hover .hp-sub-items {
   width: 180px;
   height: 80px;
   padding: 10px 0;
-  outline: 1px #e4e4e4 solid;
 }
 .top-bar-wrapper .lab:hover .lab-sub-items {
   width: 180px;
   height: 50px;
   padding: 10px 0;
-  outline: 1px #e4e4e4 solid;
 }
 /* home主页 */
 .home-main {

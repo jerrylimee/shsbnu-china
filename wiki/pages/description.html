@@ -6,23 +6,29 @@
 {% block page_content %}
 
 <div class="article-main">
-    <div class="title">Project Discription</div>
-    <div class="container">
-        <div class="content">
-            <p>
-                We picked the BL21 transformed single clone containing plasmid 5, inoculated it in LB containing antibiotics to grow overnight, diluted to OD600 of 0.1 with fresh LB, and cultured in shake flask. We incubated it at 37°C to an OD600 of 0.8, added 0.5 mM isopropyl-d-mercaptogalactoside (IPTG) for induction, and it grew at 250rpm-300rpm for 3 h at 30°C to overexpress the protein. Cells were harvested by centrifugation and resuspended in M9 liquid medium pH 5 with necessary antibiotics, 1% glucose, 20 mM naringenin, 0.5 mM IPTG, 0.1 mM 2-oxoglutaric acid, 2.5 mM sodium ascorbated at 30°. We continued incubation at C for 48h (you can choose the feed at the 24th hour in the middle: 1% glucose (20ul), 2uM naringenin), and then centrifuged it to observe the color of the colony (add HCL to show pink, add NaOH to show grass green).
-            </p>
-
-            <p>
-                The coding genes of the first two proteins are driven by the first T7 promoter of the vector for transcription, and the coding genes of the latter two proteins are driven by the second T7 promoter of the vector for transcription, and finally translated into four corresponding proteins.
-            </p>
-
-            <p>
-                Among these proteins, F3H catalyzes the conversion of naringenin to dihydrokaempferol, F3'5'H catalyzes the conversion of dihydrokaempferol to dihydromyricetin, DFR catalyzes the conversion of dihydromyricetin to leuco delphinidin, while ANS Catalytic converts of colorless delphinidin to colored delphinidin.
-
-            </p>
-        </div>
+    <div class="title">Project Description</div>
+  <div class="container aside">
+    <div class="aside-wrap" id="sidebar-top">
+      <div class="wrap-box" id="sidebar">
+        <h2 class="indicator">CONTENTS</h2>
+        <ul>
+          <li><a class="link" href="#p0-5">Background Info</a></li>
+          <li><a class="link" href="#p1-5">6. Delphinidin Synthesis Operon (Naringenin Added)</a></li>
+          <li><a class="link" href="#p2-5">7. Naringenin synthesis operon (add 4-coumaric acid)</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="content">
+      <h3 id="p0-5"><br>Background Info</h3>
+      <p id="p1">
+        An old proverb goes “The eyes are the window of the mind.”<br><br>
+However, eyesight problems have become the one of biggest worries for Chinese teenagers. How we can protect our eyesight has also become the top concern for young teenagers and their families. The NHC of PRC conducted a special survey on myopia from September to December in 2020, covering 8,604 schools nationwide and screening 2.477 million students. The results show that: in 2020, the overall near-sightedness rate of children and adolescents in our country was 52.7%. Among them, 14.3 percent of 6 years old, 35.6 percent of elementary school students, 71.1 percent of middle school students, and 80.5 percent of high school students. The data really surprises us, which also informs us it is urgent to put effort into eyesight protection.
+<br><br>
+      </p>
+      <h3 id="p1-5">Heading 1</p>
+      <h3 id="p2-5">Heading 2</p>
+    </div>
+  </div>
 </div>
 
 {% endblock %}

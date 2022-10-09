@@ -70,9 +70,11 @@ h3{
 }
 h4{
   font-size: 24px;
+  line-height: 1.4em;
 }
 h5{
   font-size: 20px;
+  line-height: 1.4em;
 }
 
 
@@ -508,6 +510,7 @@ h5{
       border-radius: 20px;
       img{
         display: block;
+        max-width: 100%;
         margin: 0 auto;
       }
       .center{
@@ -521,7 +524,28 @@ h5{
         text-justify: inter-ideograph;
         line-height: 30px;
         color: #666666;
-        margin-bottom: 10px;
+        margin: 10px 0;
+        overflow: hidden;
+        &.half{
+          display: flex;
+          span{
+            display: inline-block;
+            width: 50%;
+          }
+        }
+        &.third{
+          display: flex;
+          span{
+            display: inline-block;
+            width: 33%;
+          }
+        }
+        strong{
+          display: block;
+          width: 100%;
+          text-align: center;
+          font-size: 14px;
+        }
       }
     }
     .wrap-box{

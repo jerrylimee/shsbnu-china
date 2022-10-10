@@ -52,14 +52,18 @@
           </a>
         </div>
       </div>
-      <a href="javascript:;">
+      <a href="{{ url_for('pages', page='model') }}">
         <li>Model</li>
       </a>
       <div class="part">
-        <a href="{{ url_for('pages', page='parts') }}">
+        <a href="javascript:;">
           <li>Part</li>
         </a>
         <div class="part-sub-items">
+
+          <a href="{{ url_for('pages', page='parts') }}">
+            <li class="sub-item">Parts</li>
+          </a>
 
           <a href="{{ url_for('pages', page='contribution') }}">
             <li class="sub-item">Contribution</li>

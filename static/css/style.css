@@ -398,7 +398,9 @@ img {
   }
 }
 .home-main .box-1,
-.home-main .box {
+.home-main .box,
+.home-main .vision,
+.home-main .info-box {
   animation: auto-scroll 1s 3s forwards;
 }
 @keyframes auto-scroll {
@@ -409,49 +411,87 @@ img {
     transform: translateY(-800px);
   }
 }
-.home-main .box-1 {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  width: 700px;
-  height: 200px;
-  border-radius: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 80px;
-  box-shadow: 0px 6px 10px rgba(73, 73, 73, 0.44);
-  background-image: url("https://static.igem.wiki/teams/4255/wiki/img-0237.jpg");
-  background-size: cover;
-  padding: 0 20px;
-}
-.home-main .box {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  width: 700px;
-  height: 200px;
-  border-radius: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  box-shadow: 0px 6px 10px rgba(73, 73, 73, 0.44);
-  background-image: url('https://static.igem.wiki/teams/4255/wiki/homepage-photo-together.jpg');
-  background-size: 860px;
-  background-position: -80px -120px;
-  padding: 0 20px;
-}
-.home-main #third {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: bold;
-  font-size: 40px;
-  color: #fff;
-  padding-top: 100px;
-  margin: 0;
-  text-shadow: 0px 6px 10px rgba(73, 73, 73, 0.44);
-}
-.home-main #fourth {
-  margin-top: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin-bottom: 0;
-  color: #fff;
-  text-shadow: 0px 6px 10px rgba(73, 73, 73, 0.44);
-}
+.home-main .vision {
+            width: 90vw;
+            height: 28vw;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0 auto;
+            border-radius: 20px;
+        }
+
+        .home-main #home-title {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: left;
+            padding-top: 14vw;
+            padding-left: 4vw;
+            color: #fff;
+            text-shadow: 0px 2px 2px #333;
+        }
+
+        .home-main #home-info {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: left;
+            padding-left: 4vw;
+            color: #fff;
+            text-shadow: 0px 2px 2px #333;
+        }
+
+        .home-main #box-1 {
+            margin-top: 100px !important;
+            background-image: url(./heading.jpg);
+        }
+
+        .home-main #box-2 {
+            margin-top: 20px;
+            background-image: url(https://static.igem.wiki/teams/4255/wiki/img-0237.jpg);
+        }
+
+        .home-main #box-3 {
+            margin-top: 20px;
+            background-image: url(https://static.igem.wiki/teams/4255/wiki/homepage-photo-together.jpg);
+        }
+
+        .home-main #box-4 {
+            position: relative;
+            display: flex;
+        }
+
+        .home-main .inner-box-1 {
+            margin-top: 20px;
+            width: 30vw;
+            height: 30vw;
+            border-radius: 20px;
+            background-image: url(https://static.igem.wiki/teams/4255/wiki/publish-your-book.jpg);
+            background-size: cover;
+        }
+
+        .home-main .inner-box-2 {
+            margin-top: 20px;
+            position: relative;
+            left: 2vw;
+            width: 58vw;
+            height: 30vw;
+            background-image: url(https://static.igem.wiki/teams/4255/wiki/r-c.jpg);
+            border-radius: 20px;
+            background-size: cover;
+        }
+
+        .home-main .info-box {
+            margin: 0 auto;
+            margin-top: 150px;
+            text-align: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .home-main #text-1{
+            font-size: 40px;
+        }
+
+        .home-main #text-2{
+            font-size: 20px;
+        }
 /* team页 */
 .team-main {
   margin-top: 100px;

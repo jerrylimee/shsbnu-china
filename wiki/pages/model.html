@@ -1,47 +1,59 @@
 {% extends "layout.html" %}
-  
+
 {% block title %}Model{% endblock %}
-{% block lead %}Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.{% endblock %}
+{% block lead %}Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.{%
+endblock %}
 
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Gold Medal Criterion #3</h4>
-      <p>Use modeling to gain insight into how your project works or should be implemented. Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/medals">2022 Medals Page</a> for more information.</p>
+<div class="article-main">
+  <div class="title">Implementation</div>
+  <div class="container aside">
+    <div class="aside-wrap" id="sidebar-top">
+      <div class="wrap-box" id="sidebar">
+        <h2 class="indicator">CONTENTS</h2>
+        <ul>
+          <li><a class="link" href="#p0-5">Background</a></li>
+          <li><a class="link" href="#p1-5">Hypothesis</a></li>
+          <li><a class="link" href="#p2-5">Equations</a></li>
+          <li><a class="link" href="#p3-5">Solution</a></li>
+          <li><a class="link" href="#p4-5">Substitute Trial Numbers for the Parameters</a></li>
+          <li><a class="link" href="#p5-5">Mapping</a></li>
+          <li><a class="link" href="#p6-5">Future Plan</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Model Special Prize</h4>
-      <p>Models and computer simulations provide a great way to describe the functioning and operation of BioBrick Parts and Devices. Synthetic biology is an engineering discipline and part of engineering is simulation and modeling to determine system behavior before building your design. Designing and simulating can be iterated many times in a computer before moving to the lab. This award is for teams who build a model of their system and use it to inform system design or simulate expected behavior before or in conjunction with experiments in the wetlab.</p>
-      <p>To compete for the Best Model prize, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2022 Awards Page</a> for more information.</p>
-    </div>
-  </div>
-</div>
+    <div class="content">
+      <h3 id="p0-5">Background</h3>
+      <p id="p1">
+        Our team's trying to synthesize delphinidin with seven enzymes. The whole process can be divided into two
+        separate parts: converting coumarin into naringenin, and then converting naringenin into delphinidin. In this
+        series of reactions, naringenin plays a very important role in both parts, so it is very important for us to
+        monitor the generation of naringenin. The efficiency of traditional HPLC method is particularly low and cannot
+        monitored reactions in a timely fashion. We decide to use a naringenin biosensor instead.
+        <br><br>
+We have found a naringenin sensor once used in a previous iGEM competition. We also referred to the original paper of the sensor for coding sequence and design principles, and we updated the gene circuit for our pETDuet vector.
+        <br><br>
+In order to study the sensor response to the presence of naringenin, we planned to vary naringenin concentrations and bacterial culture conditions exhausting all combinations, which eventually would add up to more than 60 experimental groups. Apparently it would have taken too long to get the results. and we decided to conduct the experiment with modeling.
+        <br><br>
+Based on our experimental results, we found that the concentration of naringenin in the generation process ranged from 10uM to 1000uM. We hope that by adjusting, the concentration range that makes the biosensor sensitive can also stay in this range. In order to give better guidance to the experimental team and suggestion possible directions for improvement, we have established a mathematical model to theoretically calculate the value of the sensitive concentration range of the naringenin sensor. Then we can tweak the naringenin concentration to activate response more gently and easily to be observed in experiments.<br>
+      </p>
+      <h3 id="p1-5">Hypothesis</h3>
+      <p id="p2">
+        For the sake of convenience, when a quantity is not one of our experimental variables, we set it to a constant,
+        and the values are referred from the literature. <br>
+(1) We assume that cell numbers are at a plateau, ignoring growth, division and death when they are abundant and in good condition<br>
+(2) We assume adequate nutrition so that there won't be any fluctuations due to nutritional deficiencies<br>
+(3) Naringenin can enter and exit cells freely, without considering the rate for transporting through the barrier such as the membrane.<br>
+(5) Naringenin added to the cell does not degrade.<br>
+      <h3 id="p2-5">Equations</h3>
+      <p id="p3">
+        Figure: Detection mechanism for FdeR regulator, referenced from work [1]. <br>
+Our sensor detects naringenin in three steps, and we've written out these three steps separately. First, promoter PfedR initiates the expression of the FdeR protein at the rate of α1. The FdeR protein is degraded at the rate of δ1. Over time, t, the concentration of FdeR protein was accumulated in the cells to [P]. In summary, the change rate of fdeR protein concentration can be expressed as follows.<br>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Overview</h2>
-    <hr>
-    <p>Mathematical models and computer simulations provide a great way to describe the function and operation of Parts and Devices. Synthetic Biology is an engineering discipline, and part of engineering is simulation and modeling to determine the behavior of your design before you build it. Designing and simulating can be iterated many times in a computer before moving to the lab.</p>
-    <p>Please note you can compete for both the Gold Medal criterion #3 and the Best Model prize with this page.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="http://2018.igem.org/Team:GreatBay_China/Model">2018 GreatBay China</a></li>
-      <li><a href="http://2018.igem.org/Team:Leiden/Model">2018 Leiden</a></li>
-      <li><a href="https://2019.igem.org/Team:IISER_Kolkata/Model">2019 IISER Kolkata</a></li>
-      <li><a href="https://2019.igem.org/Team:Exeter/Model">2019 Exeter</a></li>
-      <li><a href="https://2019.igem.org/Team:Mingdao/Model">2019 Mingdao</a></li>
-      <li><a href="https://2020.igem.org/Team:Harvard/Model">2020 Harvard</a></li>
-      <li><a href="https://2020.igem.org/Team:Leiden/Model">2020 Leiden</a></li>
-    </ul>
+      </p>
+
+    </div>
   </div>
 </div>
 

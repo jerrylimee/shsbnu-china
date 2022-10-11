@@ -18,6 +18,7 @@
           <li><a class="link" href="#p3-5">Putting everything together</a></li>
           <li><a class="link" href="#p4-5">Expression the whole pathway</a></li>
           <li><a class="link" href="#p5-5">Anthocyanin: delphinidin color changes with pH</a></li>
+          <li><a class="link" href="#p9-5">Naringenin test</a></li>
           <li><a class="link" href="#p6-5">Hardware Product</a></li>
           <li><a class="link" href="#p7-5">1.Delphinidin dyed contact lens</a></li>
           <li><a class="link" href="#p8-5">2.Eye masks</a></li>
@@ -31,7 +32,7 @@
        Anthocyanins give plants different colors. A long time ago, scientists had been curious about the production way of anthocyanins and conducted in-depth studies on their synthesis molecular pathway. Different anthocyanins are synthesized from different substrates and catalyzed by different enzymes. In our project this year, we chose the blue anthocyanin delphinidin as the target product. We found that delphinidin synthesis depends on a continuous reaction catalyzed by seven enzymes:
       </p>
         <p>
-        <img src="https://static.igem.wiki/teams/4255/wiki/poc1.png" alt="Figure 1">
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc1.png">
       
       </p>
       <h3 id="p1-5">Sequence verification</h3>
@@ -46,7 +47,7 @@
      After transforming to E.coli and IPTG induction, we lysed the bacteria for SDS-PAGE and Coomassie brilliant blue staining at last. The result showed our plasmids pRSFDuet-F3H worked pretty well. We also studied the effect of induction time on the expression level, and set the induction time as 16 h, 20 h and 24 h at 16℃. Three parallel experiments were performed at each induction time. There was an obvious expression band (shown by red arrow). 
       </p>
  <p>
-        <img src="https://static.igem.wiki/teams/4255/wiki/poc2.png" alt="Figure 1">
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc2.png" >
       
       </p>
        <p>
@@ -218,7 +219,35 @@
        </p>
      
       <p>
-        
+         <h3 id="p9-5">Naringenin test</h3>
+
+ <p>
+        Synthesizing delphinidin involves a very long pathway. If something goes wrong, we need a proper signal to debug. We therefore planned to build a sensor to detect the product from the first plasmid, which expressed three enzymes on pETDUET-1 to produce naringenin. In the previous iGEM project, we found a naringenin detector, which produced GFP fluorescence upon receiving naringenin signal, but unfortunately, after we synthesized this naringenin detector and constructed it on the PETDuet-1 plasmid, we failed to see GFP fluorescence signal even using 50 μM standard naringenin. PETDuet-1 -GFP was used as a control to show at the right panel.
+       </p>
+<p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc30.png" alt="Figure 7">
+       </p>
+ <p>
+        This result indicated that the naringenin detector uploaded earlier was incorrect, so we reviewed the original literature and constructed a new naringenin sensor. The sensor contains a constitutive promoter to initiate the expression of a protein FdeR. This protein can specially bind to naringenin and then the compound will attach to a promoter in the opposite direction and activates the expression of a GFP. 
+       </p>
+<p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc31.png" alt="Figure 7">
+       </p>
+       <p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc32.png" alt="Figure 7">
+       </p>
+       <p>
+       We synthesize the GFP-FdeR sensor and construct it into pETDuet vector. T7 promoters remained on the vector but are assumed to be non-interfering with the sensor. 
+       </p>
+       <p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc33.png" alt="Figure 7">
+       </p>
+  <p>
+      The result showed upon introduction of naringenin into the bacteria culture, the sensor will successfully express GFP proteins at the expected band. However, our experiments are limited in that the GFP is not bright enough. We think either it is our GFP is not correctly expressed, or the FdeR protein is not sufficiently produced to give a strong GFP expression. 
+       </p>
+
+
+
 
       <h3 id="p6-5">Hardware Product</h3>
       <p>
@@ -295,7 +324,7 @@ The product production of delphinidin eye patch is completed by Good Vision Comp
 We received the product and evaluated the appearance and possible use of it. Its overall appearance is brownish yellow, the taste of menthol is refreshing, the eye patch is wrapped in food-grade tin foil, and the interior has a waterproof layer, so the overall weight is easy to carry. After inspecting this batch of goods, we sealed it into the laboratory refrigerator, everyone wore masks and gloves throughout the process, there was no skin contact, and in the follow-up experiments, we will conduct safety experiments through regular companies and formal processes supervised by the health department.
 </p>
 <p>
-        <img src="https://static.igem.wiki/teams/4255/wiki/poc29.png" alt="Figure 1">
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc29.png">
       </p>
 
 

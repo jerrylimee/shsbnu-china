@@ -1,39 +1,128 @@
 {% extends "layout.html" %}
   
-{% block title %}Measurement{% endblock %}
-{% block lead %}Synthetic Biology needs great measurement approaches for characterizing parts, and efficient new methods for characterizing many parts at once. Describe your measurement approaches on this page.{% endblock %}
+{% block title %}measurement{% endblock %}
+
 
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Measurement Special Prize</h4>
-      <p>There are a lot of exciting Parts in the Registry, but many Parts have still not been characterized. Designing great measurement approaches for characterizing new parts, or developing and implementing an efficient new method for characterizing thousands of parts are good examples.</p>
-      <p>To compete for the Best Measurement prize, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2022 Awards Page</a> for more information.</p>
-    </div>
-  </div>
-</div>
+<div class="article-main">
+  <div class="title">Engineering</div>
+  <div class="container">
+    <div class="content">
+      <h3 >Overview</h3>
+      <p id="p1">
+        This year our project is focused on the synthesis of anthocyanin, which has a lot of research and reporting on this canonical pathway. But due to anthocyanins are ubiquitous in plants, therefore, each enzyme can find multiple homologous proteins. To get the better yeild, we first compared enzymes in different species and selected the most suitable sequence for E.coli expression, we constructed several new parts, which has been submitted this year.
+        
+      </p>
+      <p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/eng1.png" alt="Figure 1">
+        </p>
+        <h3>1.pETDUET- F3H</h3>
+       <p> The first new part we uploaded this year is to express F3H, which is enzyme working to catalyze dihydrokaempferol into dihydromyricetin. The sequence we submitted here was come from Ginkgo biloba L. And we has done codon optimization for E.coli expression.
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Overview</h2>
-    <hr>
-    <p> If you've done excellent work in measurement, you should consider nominating your team for this special prize. Synthetic Biology needs great measurement approaches for characterizing parts, and efficient new methods for characterizing many parts at once. If you've done something exciting in the area of Measurement, describe it here!</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="http://2018.igem.org/Team:UC_Davis/Measurement">2018 UC Davis</a></li>
-      <li><a href="https://2019.igem.org/Team:Newcastle/Measurement">2019 Newcastle</a></li>
-      <li><a href="https://2019.igem.org/Team:Evry_Paris-Saclay/Measurement">2019 Evry Paris Saclay</a></li>
-      <li><a href="https://2019.igem.org/Team:GENAS_China/Measurement">2019 GENAS China</a></li>
-      <li><a href="https://2020.igem.org/Team:Calgary/Measurement">2020 Calgary</a></li>
-      <li><a href="https://2020.igem.org/Team:CSMU_Taiwan/Measurement">2020 CSMU Taiwan</a></li>
-    </ul>
+      </p>
+      <h5>Major protocol we use:</h5>
+      <p>
+       We asked biological company to synthesize the sequence at first. And we constructed it into pETDUET plasmid. Next, we transformed the plasmids into E. coli BL21(DE3).
+After the colony has grown up on the plate, we picked a single colony by a sterile tip and added it into 4 ml LB medium with the corresponding antibiotic. 
+Later, we added IPTG for induction and shook overnight. We also set a control group and didn’t add IPTG into it.</br>
+Finally, we centrifuged the bacterial solution at 12000 g, discard the supernatant, and used RIPA as a lysis buffer. we added loading buffer to the supernatant which contains the protein extract, and after heating at 96℃ for 10 min, we underwent SDS-PAGE and Coomassie brilliant blue staining for expression test.
+We could see a clear band at the position of ~43kD, which only appeared in the group with IPTG. The molecular weight of this band was in line with the expectation, and it was under the condition of induction, so we believed that we had successfully expressed F3H gene.
+      </p>
+ 
+
+<p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/eng2.png" alt="Figure 1">
+        </p>
+
+<p>
+ We also studied the effect of induction time on the expression level, and set the induction time as 16 h, 20 h and 24 h at 16℃. Three parallel experiments were performed at each induction time. There was an obvious expression band (shown by red arrow), but the expression levels were similar at the induction time of 16h, 20h and 24h.
+</p>
+
+<p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/eng3.png" alt="Figure 1">
+        </p>
+<p>
+Besides of time, we do concern whether expression temperature could make a difference. In our next experiment, the induction temperatures were set to be 16℃, 20℃, 30℃ and 37℃, respectively. There are also three repeats for each induced temperature. The result told us the expression level was higher at 20℃.
+</p>
+<p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/eng4.png" alt="Figure 1">
+        
+        </p>
+  <p>
+      Based on the result before, we thought about if the concentration of IPTG could effect the expression level, so we set 0.05mM、0.1mM、0.2mM、0.5mM、1mM、0.2mM concentration to give a test.
+
+      </p>
+<p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/eng5.png" alt="Figure 1">
+        
+        </p>
+<p>The result showed IPTG concentration of 0.1-0.2mM induced higher expression.</p>
+<h3>2.pETDUET-4CL, CHS-CHI</h3>
+<p>
+  We divided the seven enzymes into two parts, 4CL, CHS and CHI catalyzed the production of naringenin one by one, and naringenin was further generated into anthocyanins in the presence of F3H, F3'5'H, DFR and ANS. The 4CL, CHS and CHI sequences come from Glycine max. We constructed the first three enzymes on the pETDUET vector, in which 4CL was linked to CHS and CHI via linkers to form a fusion protein. 
+</p>
+<p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/engineering-1.jpg" alt="Figure 1">
+        
+        </p>
+<p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/engineering-2.png" alt="Figure 1">
+        
+        </p>
+
+<p>
+  The function of the enzymes can be listed below:</br>
+4CL: catalyze phenylalanine into 4-coumaryl coenzyme A</br>
+CHS: catalyze 4-coumaryl coenzyme A into chalcone</br>
+CHI: catalyze chalcone into flavanone</br>
+
+</p>
+<h5>Major protocol we use:</h5>
+<p>
+  We asked biological company to synthesize the sequence at first. And we constructed it into pETDUET plasmid. Next, we transformed the plasmids into E. coli BL21(DE3).
+After the colony has grown up on the plate, we picked a single colony by a sterile tip and added it into 4 ml LB medium with the corresponding antibiotic. 
+Later, we added IPTG for induction and shook at overnight. We also set a control group and didn’t add IPTG into it.</br>
+Finally, we centrifuged the bacterial solution at 12000 g, discard the supernatant, and used RIPA as a lysis buffer. we added loading buffer to the supernatant which contains the protein extract, and after heating at 96℃ for 10 min, we underwent SDS-PAGE and Coomassie brilliant blue staining for expression test.</br>
+We could see a clear band at the position of 112kD, which only appeared in the group with IPTG. The molecular weight of this band was in line with the expectation, and it was under the condition of induction, so we believed that we had successfully expressed fusion protein combined by 4CL, CHS and CHI.</br>
+We studied the effect of induction time on the expression level, IPTG with a final concentration of 0.2 mM was added and induced at 16℃ for 16 h, 20 h and 24 h, respectively. Three repeats for each induction time. Under proper IPTG concentration induced for different times, we lysed the bacteria for SDS-PAGE and Coomassie brilliant blue staining at last.</br></br>
+Here are our results:
+
+</p>
+
+<p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/eng8.png" alt="Figure 1">
+        
+        </p>
+
+<p>
+  The pETDUET-4CL-CHS-CHI was expressed as we saw a clearly band shown by red arrow, but the expression level is similar between each time.</br>
+Then we moved on to change expression temperature. The induction temperatures were set to be 16℃, 20℃, 30℃ and 37℃, respectively. There are also three repeats for each induced temperature.
+
+</p>
+<p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/eng9.png" alt="Figure 1">
+        
+        </p>
+
+<p>
+  As shown in the figure, 20℃ seems to be the worst condition for pETDUET-4CL-CHS-CHI.
+Next, we set 0.05mM、0.1mM、0.2mM、0.5mM、1mM、0.2mM IPTG concentration to give a expression test as well.
+
+</p>
+<p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/eng10.png" alt="Figure 1">
+        
+        </p>
+<p>
+  According to our result, there is not much difference between IPTG concentrations for pETDUET-4CL-CHS1-CHI expressing.</br>
+So we successfully expressed three of the enzymes in anthocyanin synthesis pathway.
+
+</p>
+
+
+
+    </div>
   </div>
 </div>
 

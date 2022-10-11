@@ -18,6 +18,7 @@
           <li><a class="link" href="#p3-5">Putting everything together</a></li>
           <li><a class="link" href="#p4-5">Expression the whole pathway</a></li>
           <li><a class="link" href="#p5-5">Anthocyanin: delphinidin color changes with pH</a></li>
+          <li><a class="link" href="#p9-5">Naringenin test</a></li>
           <li><a class="link" href="#p6-5">Hardware Product</a></li>
           <li><a class="link" href="#p7-5">1.Delphinidin dyed contact lens</a></li>
           <li><a class="link" href="#p8-5">2.Eye masks</a></li>
@@ -218,7 +219,35 @@
        </p>
      
       <p>
-        
+         <h3 id="p9-5">Hardware Product</h3>
+
+ <p>
+        Synthesizing delphinidin involves a very long pathway. If something goes wrong, we need a proper signal to debug. We therefore planned to build a sensor to detect the product from the first plasmid, which expressed three enzymes on pETDUET-1 to produce naringenin. In the previous iGEM project, we found a naringenin detector, which produced GFP fluorescence upon receiving naringenin signal, but unfortunately, after we synthesized this naringenin detector and constructed it on the PETDuet-1 plasmid, we failed to see GFP fluorescence signal even using 50 μM standard naringenin. PETDuet-1 -GFP was used as a control to show at the right panel.
+       </p>
+<p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc24.png" alt="Figure 7">
+       </p>
+ <p>
+        This result indicated that the naringenin detector uploaded earlier was incorrect, so we reviewed the original literature and constructed a new naringenin sensor. The sensor contains a constitutive promoter to initiate the expression of a protein FdeR. This protein can specially bind to naringenin and then the compound will attach to a promoter in the opposite direction and activates the expression of a GFP. 
+       </p>
+<p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc24.png" alt="Figure 7">
+       </p>
+       <p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc24.png" alt="Figure 7">
+       </p>
+       <p>
+       We synthesize the GFP-FdeR sensor and construct it into pETDuet vector. T7 promoters remained on the vector but are assumed to be non-interfering with the sensor. 
+       </p>
+       <p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc24.png" alt="Figure 7">
+       </p>
+  <p>
+      The result showed upon introduction of naringenin into the bacteria culture, the sensor will successfully express GFP proteins at the expected band. However, our experiments are limited in that the GFP is not bright enough. We think either it is our GFP is not correctly expressed, or the FdeR protein is not sufficiently produced to give a strong GFP expression. 
+       </p>
+
+
+
 
       <h3 id="p6-5">Hardware Product</h3>
       <p>

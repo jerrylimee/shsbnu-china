@@ -1,52 +1,310 @@
 {% extends "layout.html" %}
   
-{% block title %}Results{% endblock %}
-{% block lead %}You can describe the results of your project and your future plans here.{% endblock %}
+{% block title %}Results {% endblock %}
+{% block lead %}Collaborate throughout the year with at least one other 2022 iGEM team on a set of shared objectives related to both of your projects.{% endblock %}
 
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col-lg-5">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <ul>
-      <li>Clearly and objectively describe the results of your work.</li>
-      <li>Future plans for the project.</li>
-      <li>Considerations for replicating the experiments.</li>
-    </ul>
-  </div>
-  <div class="col-lg-7">
-    <h2>Describe what your results mean</h2>
-    <hr>
-    <ul>
-      <li>Interpretation of the results obtained during your project. Don't just show a plot/figure/graph/other, tell us what you think the data means. This is an important part of your project that the judges will look for.</li>
-      <li>Show data, but remember <b>all measurement and characterization data must also be on the Part's Main Page on the <a href="http://parts.igem.org/Main_Page">Registry</a>.</b> Otherwise these data will not be in consideration for any medals or part awards!</li>
-      <li>Consider including an analysis summary section to discuss what your results mean. Judges like to read what you think your data means, beyond all the data you have acquired during your project.</li>
-    </ul>
-  </div>
-</div>
+<div class="article-main">
+  <div class="title">Results </div>
+  <div class="container aside">
+    <div class="aside-wrap" id="sidebar-top">
+      <div class="wrap-box" id="sidebar">
+        <h2 class="indicator">CONTENTS</h2>
+        <ul>
+          <li><a class="link" href="#p0-5">The Seven (7) components of SynFlora7</a></li>
+          <li><a class="link" href="#p1-5">Sequence verification</a></li>
+          <li><a class="link" href="#p2-5">Plasmid vector expression benchmark</a></li>
+          <li><a class="link" href="#p3-5">Putting everything together</a></li>
+          <li><a class="link" href="#p4-5">Expression the whole pathway</a></li>
+          <li><a class="link" href="#p5-5">Anthocyanin: delphinidin color changes with pH</a></li>
+          <li><a class="link" href="#p6-5">Hardware Product</a></li>
+          <li><a class="link" href="#p7-5">1.Delphinidin dyed contact lens</a></li>
+          <li><a class="link" href="#p8-5">2.Eye masks</a></li>
+     
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <h3 id="p0-5">The Seven (7) components of SynFlora7</h3>
+      <p id="p1">
+       Anthocyanins give plants different colors. A long time ago, scientists had been curious about the production way of anthocyanins and conducted in-depth studies on their synthesis molecular pathway. Different anthocyanins are synthesized from different substrates and catalyzed by different enzymes. In our project this year, we chose the blue anthocyanin delphinidin as the target product. We found that delphinidin synthesis depends on a continuous reaction catalyzed by seven enzymes:
+      </p>
+        <p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc1.png" alt="Figure 1">
+      
+      </p>
+      <h3 id="p1-5">Sequence verification</h3>
+      <p >
+     After determining the sequences, we asked the biological company to synthesize. This year, we used pETDuet-1 and pRSFDuet-1 plasmids for bacteria expression. 
+      </p>
+     <h5>F3H: Naringenin to Dihydrokaempferol</h5>
+      <p >
+     In order to first detect the expression of plasmids, F3H gene, which is the first gene we received, was constructed on the pRSFDuet-1 vector through Gibson cloning. F3H gene was of most importance since it catalyze a reaction rate limiting step according to the interviews with Prof. Geng.  
+      </p>
+       <p >
+     After transforming to E.coli and IPTG induction, we lysed the bacteria for SDS-PAGE and Coomassie brilliant blue staining at last. The result showed our plasmids pRSFDuet-F3H worked pretty well. We also studied the effect of induction time on the expression level, and set the induction time as 16 h, 20 h and 24 h at 16℃. Three parallel experiments were performed at each induction time. There was an obvious expression band (shown by red arrow). 
+      </p>
+ <p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc2.png" alt="Figure 1">
+      
+      </p>
+       <p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc3.png" alt="Figure 1">
+      
+      </p>
+       <p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc4.png" alt="Figure 1">
+      
+      </p>
+ <p >
+    To quantitatively measure the expression level for the optimal conditions, we converted the SDS-Page bands into grey scale pixel figures and used imageJ to read off the integrated grey scale of each band. Error bars were obtained from the three parallel experiments. The above figure indicates that 16 hours and 20 hours have statistically similar expression efficiency, while moving up to 24 hours the express level drops. We assume the bacteria culture might need more nutritional supply after that many hours of inoculation. 
+      </p>
+       <p >
+   Incubation temperature could make a difference as well. In our next experiment, the incubation temperatures were set to be 16℃, 20℃, 30℃ and 37℃, respectively. There are also three repeats for each temperature. The result told us the expression level was higher at 30℃.
+      </p>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Project Achievements</h2>
-    <hr>
-    <p>You can also include a list of bullet points (and links) of the successes and failures you have had over your summer. It is a quick reference page for the judges to see what you achieved during your summer.</p>
-    <ul>
-      <li>A list of linked bullet points of the successful results during your project</li>
-      <li>A list of linked bullet points of the unsuccessful results during your project. This is about being scientifically honest. If you worked on an area for a long time with no success, tell us so we know where you put your effort.</li>
-    </ul>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2019.igem.org/Team:Newcastle/Results">2019 Newcastle</a></li>
-      <li><a href="https://2019.igem.org/Team:Munich/Results">2019 Munich</a></li>
-      <li><a href="https://2019.igem.org/Team:Tec-Chihuahua/Results">2019 Tec Chihuahua</a></li>
-      <li><a href="https://2020.igem.org/Team:Aalto-Helsinki/Results">2020 Aalto Helsinki</a></li>
-      <li><a href="https://2020.igem.org/Team:GreatBay_SCIE/Results">2020 GreatBay SCIE</a></li>
-      <li><a href="https://2020.igem.org/Team:Queens_Canada/Results">2020 Queens Canada</a></li>
-    </ul>
+ <p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc6.png" alt="Figure 1">
+      
+      </p>
+       <p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc7.png" alt="Figure 1">
+      
+      </p>
+
+ <p >
+   The effect of iPTG concentration was also considered. We setup an IPTG concentration gradient from 0.05mM, 0.1mM, 0.2mM, 0.5mM, 1mM, to 2mM.
+      </p>
+
+ <p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc8.png" alt="Figure 1">
+      
+      </p>
+       <p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc9.png" alt="Figure 1">
+      
+      </p>
+
+ <p >
+   Gel electrophoresis showed that, IPTG concentration of 0.2-0.5 mM resulted in a better protein yield, although the difference is not significant. 
+      </p>
+      <h3 id="p2-5">Plasmid vector expression benchmark</h3>
+      <p>
+       Furthermore, although we have successfully expressed F3H gene on the plasmid, the expression level on pETDUET plasmid was not satisfactory. Because the pathway to produce anthocyanins is long, we want each enzyme to be expressed as efficiently as possible. So we talked with experts and decided to adjust the expression methods. Here we used GFP as a reporter gene, CK1-3 serve as control,(IPTG concentration of 0.5mM, 16℃,200rpm,16h), and the result showed that the fluorescence is 5 orders of magnitude brighter than the control group, indicating good expression capacity of the vector. 
+      </p>
+      <p>
+      <img src="https://static.igem.wiki/teams/4255/wiki/poc10.png" alt="Figure 3">
+      </p>
+     
+
+      <h3 id="p3-5">Putting everything together</h3>
+      <p>
+       Having found the optimized parameters for gene expression, we started to construct the complete anthocyanin bio-synthesis pathway.
+      </p>
+       <p>
+       We divided the seven enzymes into two parts, 4CL, CHS and CHI catalyzed the production of naringenin one by one, and naringenin was further transformed into anthocyanins in the presence of F3H, F3'5'H, DFR and ANS. We constructed the first three enzymes on the pETDUET-1 vector, in which 4CL was linked to CHS and CHI via linkers to form a fusion protein. We constructed the last four enzymes on the pRSFDuet-1 vector. F3H was fused to F3'5'H to express a larger protein. DFR and ANS were expressed separately.
+      </p>
+       <p>
+       The results of plasmid construction are shown in the figure below:
+      </p>
+      <p>
+        
+      <img src="https://static.igem.wiki/teams/4255/wiki/poc11.png" alt="Figure 4"></span>
+     
+      </p>
+       <p>
+        
+      <img src="https://static.igem.wiki/teams/4255/wiki/poc12.png" alt="Figure 4"></span>
+     
+      </p>
+      <h3 id="p4-5">Expression the whole pathway</h3>
+      <p>
+       Next, we tested whether bacteria could express the anthocyanin synthesis pathway we constructed. We took two large plasmids and transformed into to E.coli. The two kinds of bacteria were cultured overnight in shake flask and grown to logarithmic stage. IPTG with a final concentration of 0.2 mM was added and induced at 16℃ for 16 h, 20 h and 24 h, respectively. Three repeats for each induction time. Under proper IPTG concentration induced for different times, we lysed the bacteria for SDS-PAGE and Coomassie brilliant blue staining at last.  </p>
+       <p>
+        
+      <img src="https://static.igem.wiki/teams/4255/wiki/poc13.png" alt="Figure 4"></span>
+     
+      </p>
+      <p>
+        
+      <img src="https://static.igem.wiki/teams/4255/wiki/poc14.png" alt="Figure 4"></span>
+     
+      </p>
+
+  <p>
+       pETDUET-4CL-CHS-CHI was expressed as we saw a clear band shown by red arrow. The size of the band is slightly above 100kD which matches our expectations. Induction time analysis showed that with longer expression time, the expression increased significantly beyond 16 hours, but 24 hours and 20 hours are not significantly different.  </p>
+<p>
+        
+      <img src="https://static.igem.wiki/teams/4255/wiki/poc15.png" alt="Figure 4"></span>
+     
+      </p>
+ <p>
+      pRSFDuet-F3H-F3'5'H-DFR-ANS didn’t show a clear band on the SDS-PAGE results. We were expecting a band near 95 kD.  </p>
+
+<p>
+      Then we moved on to change expression temperature.  </p>
+
+<p>
+     Temperature gradient optimization experiments were suggested by Dr. Yong Zu, from our Human Practices interview. You can refer to our HP page for more details. The induction temperatures were set to be 16℃, 20℃, 30℃ and 37℃, respectively. There are also three repeats for each induced temperature.  </p>
+
+<p>
+        
+      <img src="https://static.igem.wiki/teams/4255/wiki/poc16.png" alt="Figure 4"></span>
+     
+      </p>
+      <p>
+        
+      <img src="https://static.igem.wiki/teams/4255/wiki/poc17.png" alt="Figure 4"></span>
+     
+      </p>
+
+
+<p>
+      pETDUET-4CL-CHS-CHI can be well expressed, indicated by a clear band near the top of 100kD, which is exactly what we had expected. When the temperature rises, the expression level goes unstable, lower at 20 degree C and higher at 30 degree C. The expression dropped significantly at 37 degree C. At the same time, there is a band near 120 kD showing clear expression. This band doesn’t correspond to a designed protein, and at the same time, it has hint amount of expression at 16 degree C and 20 degree C. We determined this is not a band of our design and disregard it. The lower temperature 16 degree C seems to be the best condition here. We think the reason might be the lower temperature slows down the folding process, and the plant-originated proteins have a better chance to be correctly folded and properly dissolve in the solution. 
+       </p>
+<p>
+        
+      <img src="https://static.igem.wiki/teams/4255/wiki/poc18.png" alt="Figure 4"></span>
+     
+      </p>
+      <p>
+        
+      <img src="https://static.igem.wiki/teams/4255/wiki/poc19.png" alt="Figure 4"></span>
+     
+      </p>
+       <p>
+        
+      <img src="https://static.igem.wiki/teams/4255/wiki/poc20.png" alt="Figure 4"></span>
+     
+      </p>
+<p>
+      On the SDS-Page figure, pRSFDuet-F3H-F3’5’H-DFR-ANS didn’t show a band near the expect position around 95 kD. After image analysis, we suspect that our naked-eyes are not accurate enough. The grey-scale inverted image showed possible expression near 95KD bands at 20 and 30 degree Celsius. The impression is backed-up on the numeric analysis from integrating the grey scales. At 30 degree C, the expression is the highest in average level, but not significantly better than 20 degree due to the large error bar. When temperature is higher at 37 degree C, the expression dropped to the background level, indicating too high a temperature is not helping. 
+       </p>
+       <p>
+      The heavier band (at > 100 kD position) at higher temperatures at 20, 30, 37 degree C are clear, but do not correspond to any protein we designed. We determine this is a polluted band and disregard its appearance. 
+       </p>
+       <p>
+     Next, we set 0.05mM、0.1mM、0.2mM、0.5mM、1mM、0.2mM (O2 short) IPTG concentration to give a expression test as well. “O2 short” means the oxygen supply is limited by sealing the culture container. 
+       </p>
+ <p>
+        
+      <img src="https://static.igem.wiki/teams/4255/wiki/poc21.png" alt="Figure 4"></span>
+     
+      </p>
+       <p>
+        
+      <img src="https://static.igem.wiki/teams/4255/wiki/poc22.png" alt="Figure 4"></span>
+     
+      </p>
+  <p>
+      For the expression of pETDUET-4CL-CHS-CHI, we picked the previously determined temperature of 30 degree C. We can observe a clear band on SDS-Page results around the expected band of 100kD. The quantitative readings do not suggest a best iPTG concentration in this case. It seems 0.2 to 0.5 mM worked the best. At 1.0 mM, the expression level is remarkably higher, but given the diminishing error bar, we would treat this as an outlier. 
+       </p>
+  <p>
+        
+      <img src="https://static.igem.wiki/teams/4255/wiki/poc23.png" alt="Figure 4"></span>
+     
+      </p>
+  <p>
+      pRSFDuet-F3H-F3'5'H-DFR-ANS is experimented with the above iPTG concentration gradient at the previously found optimal temperature, i.e., 30 degree C. This time, we did not observe any band around expected 95kD. After image processing and readings, there is still no hint of the expression. This doesn’t mean the plasmid is not working, but for this experimental trial, we failed to observe a nice result. Given the complex experiment conditions, the plasmid will be produced clearly in other rounds of experiments. 
+       </p>
+
+      <h3 id="p5-5">Anthocyanin: delphinidin color changes with pH</h3>
+      <p>
+       The second plasmid contained last four enzymes on the pRSFDuet-1 vector, in which F3H was fused to F3'5'H and DFR was fused to ANS. We added naringenin to the culture and induced the expression of bacteria, and the next morning, we were surprised to see pink bacteria. We immediately found the relevant experts and ask whether this is the target product delphinidin, expert suggested that anthocyanins have a significant characteristics, which shows different colors at different pH, so we went back to the lab for pH adjustment, and successfully in different pH conditions to see the different color, this suggests that we eventually succeeded in producing anthocyanins. (IPTG with a final concentration of 0.5 mM was added and induced at 16℃ for 16 h). The color tone is too bright for delphinidin, which indicates the substance we obtained is not pure enough. 
+      </p>
+      <p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc24.png" alt="Figure 7">
+       </p>
+     
+      <p>
+        
+
+      <h3 id="p6-5">Hardware Product</h3>
+      <p>
+       In order to test if delphinidin can be used to make end-user product, we carried out the following experiments. Our lab experiments are not capable of producing large amounts of delphinidin yet, and we purchased food-grade delphinidin powder from specialty suppliers. These are extracted from fruits and plants, and therefore they contain a mixture of color substances. When we pick what powder to buy, we studied the ingredients and colors. All powder we purchased have greater than 80% verified to be delphinidin. 
+      </p>
+      <h3 id="p7-5">1.Delphinidin dyed contact lens</h3>
+      <p>
+       In the interview with Dr. Ligong Shao, we received the advice that it is promising to satisfy the requirements for the safety, market reception and medical efficacy of our delphinidin-dyed contact lenses, and we were happy to experiment with the viability make this product and investigate possible problems. Therefore we conducted the following experiments:
+      </p>
+      <p>
+        
+      <img src="https://static.igem.wiki/teams/4255/wiki/poc25.png" alt="Figure 16">
+      </p>
+     <h5>Observations
+     </h5>
+<p>
+The above image shows our delphinidin-dyed contact lenses. We set 3 colors for 5 concentration gradients and 6 time periods. Among the different molar concentrations, bilberry extract has the darkest color and blueberry extract has the lightest color. In the experimental comparison of three colors with different concentrations, we found that the staining time of 10 min is difficult to make the color attached, and the staining results of 24h and 48h are basically the same.
+</p>
+<p>
+  In the comparison of experimental results of the same time and the same plant extract, we conclude that there is no apparent difference between the results of 2.5mol and 5mol is , and the there is apparent difference between 7.5mol and 10mol. 
+</p>
+<p>
+  From the perspective of cost, it can be concluded that the best effect of dyeing bilberry extract in a concentration of 7.5 mol for 24 hours has the best effect and the lowest cost.
+</p>
+<p>
+  The light transmittance of our contact lenses is from 100% to 20%, which means that we can create all shades from colorless to darkest (like sunglasses) by molar concentration and staining time. We have proved the breadth of our contact lens staining range, which can be applied to the vast majority of scenes and meet the needs of the vast number of logarithms.
+</p>
+  <p>
+        
+      <img src="https://static.igem.wiki/teams/4255/wiki/poc26.png" alt="Figure 16">
+      </p>
+<p>
+ The light transmittance of contact lenses after 10 min, 3 h, 6 h, 12 h, 24 h, 48 h after staining is shown in the figure above. A lower light transmittance indicates deeper staining. Our data shows that anthocyanins can color contact lenses very well. 
+</p>
+
+<p>
+ Color fastness should be considered next. Absorbance data were obtained by negative logarithmic conversion of the transmittance data. Let the absorbance data after staining be A_(initial), the data after washing (de-coloring) be A_(final), A_(final)/A_(initial) can define a color fastness data.
+</p>
+  <p>
+        
+      <img src="https://static.igem.wiki/teams/4255/wiki/poc27.png" alt="Figure 16">
+      </p>
+
+<p>
+ It can be seen that the color fastness of mulberry extract is relatively optimal. But all pigments have a color of 20%-50%. This indicates that the problem of color loss does occur. We believe that in the future, we should further test the bioaffinity, irritation and safety of pigments for the cornea, and find ways to improve color fastness.
+</p>
+
+<p>
+ For color fastness, we also tested coloring different cloth materials with delphinidin. We intend to dye cloth and make clothes, canvas bags and other related dyeable products. This dye does not cause allergies or some other adverse reactions. Coloring was done by soaking the cloth overnight a high concentration of the delphinidin dye. The next day, the cloth is collected and air-dried. Decoloring was done by water-soaking the cloth overnight. The results showed that the bilberry extracted delphinidin dye can keep the color after washing. 
+</p>
+  <p>
+        
+      <img src="https://static.igem.wiki/teams/4255/wiki/poc28.png" alt="Figure 16">
+      </p>
+
+<h5>Safety Considerations</h5>
+<p>
+The product is manufactured and experimented entirely in a laboratory setting. Our contact lenses are only used for color fastness experiments and nobody has ever worn the samples. After the experiment, we strictly followed the safety regulations and properly treated the used contact lens test products.
+</p>
+
+<h3 id="p8-5">
+  2.Eye masks
+</h3>
+<p>
+In our interview with Dr. Dan Ding, we learned that in addition to daily eye wash and eye care for the eyes, commonly used and sold products include eye protection patches (eye masks) that can contain plant-based medicine. We contacted Good Vision Company, a company with many years of experience and properly licensed in the R&D of eye patch, to try out the idea of mix delphinidin into the eye patch product. 
+</p>
+<p>
+For safety concerns, we do not dare to be careless. We learned from the research and development department of Good Vision Company about quality inspections before the manufacturing. They helped us verified our delphinidin material meet their safety requirement. After production, further safety and quality inspections will be carried out to ensure that all products have no safety problems when they are delivered to customers. Refer to safety page for more details on eye patch safety inspection rules.
+</p>
+<p>
+The product production of delphinidin eye patch is completed by Good Vision Company, We also combined with the HP interview with Minister Qingli Wang for safety confirmations
+</p>
+<p>
+We received the product and evaluated the appearance and possible use of it. Its overall appearance is brownish yellow, the taste of menthol is refreshing, the eye patch is wrapped in food-grade tin foil, and the interior has a waterproof layer, so the overall weight is easy to carry. After inspecting this batch of goods, we sealed it into the laboratory refrigerator, everyone wore masks and gloves throughout the process, there was no skin contact, and in the follow-up experiments, we will conduct safety experiments through regular companies and formal processes supervised by the health department.
+</p>
+<p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc29.png" alt="Figure 1">
+      </p>
+
+
+      
+
+
+
+
+    </div>
   </div>
 </div>
 

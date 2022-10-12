@@ -1,39 +1,199 @@
 {% extends "layout.html" %}
   
-{% block title %}Measurement{% endblock %}
-{% block lead %}Synthetic Biology needs great measurement approaches for characterizing parts, and efficient new methods for characterizing many parts at once. Describe your measurement approaches on this page.{% endblock %}
+{% block title %}measurement{% endblock %}
+
 
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Measurement Special Prize</h4>
-      <p>There are a lot of exciting Parts in the Registry, but many Parts have still not been characterized. Designing great measurement approaches for characterizing new parts, or developing and implementing an efficient new method for characterizing thousands of parts are good examples.</p>
-      <p>To compete for the Best Measurement prize, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2022 Awards Page</a> for more information.</p>
-    </div>
-  </div>
-</div>
+<div class="article-main">
+  <div class="title">Measurement</div>
+    
+    <div class="container">
+      <div class="content">
+      <h3 >Overview</h3>
+      <p id="p1">
+        This year, our team confronted three challenges. 
+      </p>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Overview</h2>
-    <hr>
-    <p> If you've done excellent work in measurement, you should consider nominating your team for this special prize. Synthetic Biology needs great measurement approaches for characterizing parts, and efficient new methods for characterizing many parts at once. If you've done something exciting in the area of Measurement, describe it here!</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="http://2018.igem.org/Team:UC_Davis/Measurement">2018 UC Davis</a></li>
-      <li><a href="https://2019.igem.org/Team:Newcastle/Measurement">2019 Newcastle</a></li>
-      <li><a href="https://2019.igem.org/Team:Evry_Paris-Saclay/Measurement">2019 Evry Paris Saclay</a></li>
-      <li><a href="https://2019.igem.org/Team:GENAS_China/Measurement">2019 GENAS China</a></li>
-      <li><a href="https://2020.igem.org/Team:Calgary/Measurement">2020 Calgary</a></li>
-      <li><a href="https://2020.igem.org/Team:CSMU_Taiwan/Measurement">2020 CSMU Taiwan</a></li>
-    </ul>
+        <h5>1. Visually non-measureable products</h5> 
+        <p>The proteins and intermediates fabricated in our proposed pathway are colorless.</p>
+        
+        <h5>2. Limited wet-lab time</li>
+        <p>We had to make the most out of a single experiment</p>
+        
+        <h5>3. Difficulty measurements</h5>
+        <p>For highschool students, HPLC for protein or chemical measurement is beyond our reach.</p>
+
+      <p>
+        We learned in the training that quantitative measurements are key to synthetic biology work. With numerical results, we can critically analyze the production of proteins and expression of genes. We came up with two solutions. 
+      </p>
+
+      <h5>1. Build a biosensor</h5> 
+      <p>A biosensor can report fluorescence signal upon detecting the target substance. We researched, designed, built and tested a biosensor for an important intermediate, Naringenin, along our proposed synthetic pathway. We had spent quite some time to debug it. It worked eventually but not good enough to generate quantitative measurements yet. Refer to our <a href="https://2022.igem.wiki/shsbnu-china/engineering">Proof-of-Concept</a> page and parts registery for more information.  </p>
+        
+      <h5>2. Analyze SDS-Page Numerically</h5> 
+      <p>We have obtained many electrophoresis photos for the proteins. We luckily learned a trick to turn the darkness of the band into numerical values for further analysis. In fact, the principle behind this is simple. On the SDS-Page photo, if a protein band is broader and darker in color, it is produced with more quantities. The amount of protein is roughly proportional to the total darkness in the band. We can turn the photos into grey scale, choose a proper area enclosing the band, and use a software to read the total grey scale as the the amount of produced protein. 
+      </p>
+
+      <p>
+        In this page, we document how exactly we made the numerical analysis on the SDS-Page results and demonstrate how it help us gain a deeper understanding. 
+      </p>
+      <p>
+        With this method, we are also able to make <b>quantitative plots</b> 
+        and plot with <b>error bars</b>. 
+      </p>
+
+
+      </div>
+    </div>
+
+    <!-- An empty block-->
+    <div>
+      <p> </br> </br> </br> </p>
+    </div>
+
+    <div class="container">
+      <div class="content">
+      
+      <h3>Methods</h3>
+
+      <h5>ImageJ</h5>
+      <p>
+        There are many software tools one can use to read off grey scale numbers on a picture, such as Photoshop, Adobe Illustrator, Python packages and even some free web-apps. We were recommended to use ImageJ, a free and simple software made by National Institute of Health. 
+      </p>
+
+      <p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/measurement-1.png" alt="Figure 1">
+      </p>
+
+      <p>
+        This is what the software looks like. Following the procedures top-down, left-to-right, you will be able to read any SDS-Page photos into numerical values. 
+      </p>
+
+      <p>
+      1. Convert the loaded image into grey scale picture by setting "Image - Type - 8-bit". </br>
+      
+      2. Perform a background substraction by using "Process - Subtract Background". </br>
+
+      3. Important! Invert the bright/dark display of the image using "Edit - Invert". Otherwise, your empty expression bands will have higher readings. </br>
+
+      4. Prepare area measurement by setting "Analyze - Set Measurement". You can easily find area-reading related checkboxes. </br>
+      </p>
+
+      <p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/measurement-2.png" alt="Figure 2">
+      </p>
+
+      <p>
+      5. Use the drawing tool to embody the area of your band with a elliptic circle. </br>
+
+      6. Use menu function to read the integrated grey scale in the area, or use hot-key Ctrl+M. </br>
+
+      7. The readings are displayed in a new window. You need to export the numbers into other tools for plotting and analysis. 
+      </p>
+
+      <p>
+        Every SDS-Page image in our experiment results is analyzed in this manner for quantitative analysis. You can find a total of seven such plots in our experiment results page. Without re-iterating all plots, we would like to show two instances where such quantitative analysis totally changed our understanding of the results.  
+      </p>
+
+      </div>
+    </div>
+
+    <div>
+      <p> </br> </br> </br> </p>
+    </div>
+
+    <div class="container">
+      <div class="content">
+      
+      <h3>Expression or Non-expression</h3>
+
+      <p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc18.png" alt="Figure 1">
+      </p>
+
+      <p>
+        In this SDS-Page results, you can clearly see a band emerge when the temperature rises above 20 degree Celsius. Alert! This is not a correct band. The size of the protein in this band is much bigger than 100kD, which doesn't exist in our designed enzymes. 
+
+        Notice the space slight below 100kD line. Our anticipated protein band should be around 95kD. At first, we decide this picture suggests no expression of the designed proteins (plasmid pRSFDuet-F3H-F3’5’H-DFR-ANS), but after all the image treatment, we were surprised to learn there is an expression. Certainly the expression was not strong or stable enough, but we learned a big lesson in this analysis.  
+      </p>
+
+      <p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc20.png" alt="Figure 1">
+      </p>
+
+      </div>
+    </div>
+
+    <div>
+      <p> </br> </br> </br> </p>
+    </div>
+
+    <div class="container">
+      <div class="content">
+      
+      <h3>The Optimal Temperature Condition</h3>
+
+      <p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc6.png" alt="Figure 1">
+      </p>
+
+      <p>
+        The above SDS-Page results showed one of the most important enzymes in our pathway, F3H. Luckily the expression level of this protein is very strong, evidenced by a thick and dark band after iPTG induction. 
+      </p>
+
+      <p>
+        On a first glance, 20 degree Celsius seems to be the best condition for its expression, simply for the reason that under this condition, the bands are wider and darker than in other conditions. 
+      </p>
+
+      <p>
+        <img src="https://static.igem.wiki/teams/4255/wiki/poc7.png" alt="Figure 1">
+      </p>
+      <p>
+        However, quantitative analysis says otherwise. The numerical expression level is the highest at 30 degree Celsius. The difference is statitically meaningful, because the difference in the average values are bigger than the variances. This is also the temperature we used for later experiments in optimizing iPTG induction strength. 
+      </p>
+
+      </div>
+    </div>
+
+    <div>
+      <p> </br> </br> </br> </p>
+    </div>
+
+    <div class="container">
+      <div class="content">
+      
+      <h3>Limitations</h3>
+
+      <p>
+        Meanwhile, we also realize there are limitations to this method. The quality of the electrophoresis gel photo remarkably bias the reading from grey scale. Lighting, quality of camera, and the quality of the SDS-Page run are all factors affecting the final numbers.
+      </p>
+
+      <p>
+        The software treatment also causes random errors. The placement of the circle might not be the best, subtraction of background might lead to errors, and converting to grey scale also lose some of the quantitative information. 
+      </p>
+
+      <p>
+        In summary, this measurement method is a powerful method, espeically for high school students who have only limited access to accurate analysis methods and devices. On the other hand, the results should be referred to with caution. When possible, we will use other methods to confirm the conclusions drawn here. 
+      </p>
+
+      </div>
+    </div>
+
+    <div>
+      <p> </br> </br> </br> </p>
+    </div>
+
+    <div class="container">
+      <div class="content">
+      
+      <h3>Check out our <a href="https://2022.igem.wiki/shsbnu-china/proof-of-concept">Proof-of-Concept</a>
+      Page for all numerical SDS-Page and plots!!</h3>
+
+      </div>
+    </div>
+
+
   </div>
 </div>
 

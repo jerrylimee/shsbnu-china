@@ -46,9 +46,13 @@
           <a href="{{ url_for('pages', page='implementation') }}">
             <li class="sub-item">Implementation</li>
           </a>
-          <br>
+           <br>
           <a href="{{ url_for('pages', page='engineering') }}">
             <li class="sub-item">Engineering</li>
+          </a>
+          <br>
+          <a href="{{ url_for('pages', page='results') }}">
+            <li class="sub-item">Results</li>
           </a>
         </div>
       </div>
@@ -64,11 +68,19 @@
           <a href="{{ url_for('pages', page='parts') }}">
             <li class="sub-item">Parts</li>
           </a>
-
+         
           <a href="{{ url_for('pages', page='contribution') }}">
             <li class="sub-item">Contribution</li>
           </a>
 
+          <a href="{{ url_for('pages', page='measurement') }}">
+            <li class="sub-item">Measurement</li>
+          </a>
+
+          <a href="{{ url_for('pages', page='hardware') }}">
+            <li class="sub-item">Hardware</li>
+          </a>          
+           
         </div>
       </div>
       <div class="hp">
@@ -81,23 +93,12 @@
             <li class="sub-item">Human Practice</li>
           </a>
           <br>
-          <a href="{{ url_for('pages', page='education') }}">
+          <a href="{{ url_for('pages', page='communication') }}">
             <li class="sub-item">Education</li>
           </a>
         </div>
       </div>
-      <div class="lab">
-
-        <a href="javascript:;">
-          <li>Lab</li>
-        </a>
-
-        <div class="lab-sub-items">
-          <a href="{{ url_for('pages', page='notebook') }}">
-            <li class="sub-item">Notebook</li>
-          </a>
-        </div>
-      </div>
+      
 
       <a href="{{ url_for('pages', page='safety') }}">
         <li>Safety</li>

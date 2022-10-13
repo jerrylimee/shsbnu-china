@@ -421,18 +421,20 @@ img {
             background-repeat: no-repeat;
             margin: 0 auto;
             border-radius: 20px;
+            transition: all 0.2s;
         }
 
-        .home-main #home-title {
+.home-main #home-title {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             text-align: left;
             padding-top: 14vw;
             padding-left: 4vw;
             color: #fff;
             text-shadow: 0px 2px 2px #333;
+            font-weight: bold;
         }
 
-        .home-main #home-info {
+.home-main #home-info {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             text-align: left;
             padding-left: 4vw;
@@ -440,36 +442,53 @@ img {
             text-shadow: 0px 2px 2px #333;
         }
 
-        .home-main #box-1 {
+.home-main #box-1 {
             margin-top: 100px !important;
-            background-image: url(https://static.igem.wiki/teams/4255/wiki/heading.jpg);
+            background-image: url(./heading.jpg);
+            overflow: hidden;
         }
 
-        .home-main #box-2 {
+.home-main #box-2 {
             margin-top: 20px;
             background-image: url(https://static.igem.wiki/teams/4255/wiki/img-0237.jpg);
+            overflow: hidden;
         }
 
-        .home-main #box-3 {
+.home-main #box-2:hover {
+            width: 89vw;
+            height: 27vw;
+        }
+
+.home-main #box-3 {
             margin-top: 20px;
             background-image: url(https://static.igem.wiki/teams/4255/wiki/home-1-1.jpg);
+            overflow: hidden;
         }
 
-        .home-main #box-4 {
+.home-main #box-3:hover {
+            width: 89vw;
+            height: 27vw;
+        }
+
+
+.home-main #box-4 {
             position: relative;
             display: flex;
+            overflow: visible;
         }
 
-        .home-main .inner-box-1 {
+.home-main .inner-box-1 {
             margin-top: 20px;
             width: 30vw;
             height: 30vw;
             border-radius: 20px;
             background-image: url(https://static.igem.wiki/teams/4255/wiki/publish-your-book.jpg);
             background-size: cover;
+            transition: all 0.2s;
+            overflow: hidden;
         }
 
-        .home-main .inner-box-2 {
+.home-main .inner-box-2 {
             margin-top: 20px;
             position: relative;
             left: 2vw;
@@ -478,20 +497,32 @@ img {
             background-image: url(https://static.igem.wiki/teams/4255/wiki/home-2.jpg);
             border-radius: 20px;
             background-size: cover;
+            transition: all 0.2s;
+            overflow: hidden;
         }
 
-        .home-main .info-box {
+.home-main .inner-box-1:hover {
+            width: 28vw;
+            height: 28vw;
+        }
+
+.home-main .inner-box-2:hover {
+            width: 56vw;
+            height: 28vw;
+        }
+
+.home-main .info-box {
             margin: 0 auto;
             margin-top: 150px;
             text-align: center;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
-        .home-main #text-1{
+.home-main #text-1 {
             font-size: 40px;
         }
 
-        .home-main #text-2{
+.home-main #text-2 {
             font-size: 20px;
         }
 /* team页 */
